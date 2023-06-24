@@ -1,0 +1,194 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Social Media Dashboard</title>
+  <script>
+  if (
+    localStorage.getItem('color-theme') === 'dark' ||
+    (!('color-theme' in localStorage) &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+  document.documentElement.classList.add('dark');
+  } else {
+  document.documentElement.classList.remove('dark');
+  }
+  </script>
+</head>
+<body class="h-[100vh] dark:bg-darkBlue">
+  <div class="w-full h-60 bg-midWhite rounded-b-2xl dark:bg-midBlue"></div>
+  <section class="container mx-auto px-7 z-1 pb-10 -mt-[240px] md:flex md:justify-between md:items-center md:pb-5">
+      <div class="py-5">
+        <h1 class="font-bold text-2xl text-black dark:text-white">Social Media Dashboard</h1>
+        <span class="font-bold text-gray">Total Followers: 23,004</span>
+      </div>
+      <hr class="md:hidden border-gray">
+      <div class="flex justify-between pt-5 md:justify-end md:gap-5 md:items-center">
+        <span class="text-gray font-bold">Dark Mode</span>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider toggle-dark"></span>
+          </label>
+      </div>
+  </section>
+  <section class="container mx-auto px-7 pb-10">
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div class="flex flex-col items-center bg-darkWhite rounded-md border-t-borderBlue border-t-4 
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <div class="flex flex-row pt-7 gap-2">
+          <img src="./images/icon-facebook.svg" alt="FB icon">
+          <span class="text-gray font-bold text-sm">@nathanf</span>
+        </div>
+        <span class="text-[3.5rem] font-bold dark:text-white">1987</span>
+        <span class="uppercase tracking-[.3rem] text-gray text-sm font-medium">Followers</span>
+        <div class="flex items-center gap-1">
+          <img src="./images/icon-up.svg" alt="up-icon">
+          <span class="text-green font-bold py-7">12 Today</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center bg-darkWhite rounded-md border-t-borderBlue border-t-4
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <div class="flex flex-row pt-7 gap-2">
+          <img src="./images/icon-twitter.svg" alt="FB icon">
+          <span class="text-gray font-bold text-sm">@nathanf</span>
+        </div>
+        <span class="text-[3.5rem] font-bold dark:text-white">1044</span>
+        <span class="uppercase tracking-[.3rem] text-gray text-sm font-medium">Followers</span>
+        <div class="flex items-center gap-1">
+          <img src="./images/icon-up.svg" alt="up-icon">
+          <span class="text-green font-bold py-7">99 Today</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center bg-darkWhite rounded-md border-t-borderPink border-t-4
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <div class="flex flex-row pt-7 gap-2">
+          <img src="./images/icon-instagram.svg" alt="FB icon">
+          <span class="text-gray font-bold text-sm">@realnathanf</span>
+        </div>
+        <span class="text-[3.5rem] font-bold dark:text-white">11k</span>
+        <span class="uppercase tracking-[.3rem] text-gray text-sm font-medium">Followers</span>
+        <div class="flex items-center gap-1">
+          <img src="./images/icon-up.svg" alt="up-icon">
+          <span class="text-green font-bold py-7">1099 Today</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center bg-darkWhite rounded-md border-t-red border-t-4
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <div class="flex flex-row pt-7 gap-2">
+          <img src="./images/icon-youtube.svg" alt="FB icon">
+          <span class="text-gray font-bold text-sm">Nathan F.</span>
+        </div>
+        <span class="text-[3.5rem] font-bold dark:text-white">8239</span>
+        <span class="uppercase tracking-[.3rem] text-gray text-sm font-medium">Subscribers</span>
+        <div class="flex items-center gap-1">
+          <img src="./images/icon-down.svg" alt="up-icon">
+          <span class="text-red font-bold py-7">144 Today</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="container mx-auto px-7 pb-10">
+    <h2 class="pb-5 font-bold text-gray text-lg dark:text-white">Overview - Today</h2>
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Page Views</span>
+        <img class="justify-self-end" src="./images/icon-facebook.svg" alt="Fb icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">87</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-up.svg" alt="icon up">
+          <span class="text-green font-bold">3%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Likes</span>
+        <img class="justify-self-end" src="./images/icon-facebook.svg" alt="Fb icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">52</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-down.svg" alt="icon down">
+          <span class="text-red font-bold">2%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Likes</span>
+        <img class="justify-self-end" src="./images/icon-instagram.svg" alt="IGicon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">5462</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-up.svg" alt="icon up">
+          <span class="text-green font-bold">2257%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Profile Views</span>
+        <img class="justify-self-end" src="./images/icon-instagram.svg" alt="IG icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">52k</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-up.svg" alt="icon up">
+          <span class="text-green font-bold">1375%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Retweet</span>
+        <img class="justify-self-end" src="./images/icon-twitter.svg" alt="Twitter icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">117</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-up.svg" alt="icon up">
+          <span class="text-green font-bold">303%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Likes</span>
+        <img class="justify-self-end" src="./images/icon-twitter.svg" alt="Twitter icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">507</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-up.svg" alt="icon up">
+          <span class="text-green font-bold">553%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Likes</span>
+        <img class="justify-self-end" src="./images/icon-youtube.svg" alt="YT icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">107</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-down.svg" alt="icon down">
+          <span class="text-red font-bold">19%</span>
+        </div>
+      </div>
+
+      <div class="bg-darkWhite rounded-lg p-5 grid grid-cols-2 grid-rows-2 gap-y-4 place-items-center
+      hover:bg-activeDarkWhite hover:cursor-pointer dark:hover:bg-activeDarkBlue dark:bg-lightBlue">
+        <span class="justify-self-start font-bold text-gray text-sm">Total Views</span>
+        <img class="justify-self-end" src="./images/icon-youtube.svg" alt="YT  icon">
+        <span class="justify-self-start font-bold text-4xl text-black dark:text-white">1407</span>
+        <div class="justify-self-end flex gap-1 items-center">
+          <img src="./images/icon-down.svg" alt="icon down">
+          <span class="text-red font-bold">12%</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+<script src="script.js"></script>
+</body>
+</html>
